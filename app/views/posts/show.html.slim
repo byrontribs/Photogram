@@ -1,2 +1,14 @@
-= image_tag @post.image.url(:medium)
-= @post.caption
+.posts-wrapper.row
+  .post
+    .post-head
+      .name
+        | Byron
+    .image.center-block
+      = image_tag @post.image.url(:medium)
+    p.caption
+      = @post.caption
+      
+  .edit-links style='text-align:center'
+    = link_to 'cancel  |', posts_path
+      
+    = link_to '  Edit Post', edit_post_path(@post)

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'letter_opener', group: :development
+gem 'devise'
 gem "paperclip", "~> 5.0.0"
 gem 'simple_form'
 gem 'foundation-rails'

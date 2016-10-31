@@ -9,7 +9,6 @@ html
   body
     - flash.each do |name, msg| 
       = content_tag :div, msg, class: [:alert, alert_for(name)] 
-      
 
 
   .navbar-brand
@@ -23,4 +22,5 @@ html
           span  = link_to 'Login', '#'
         .large-2.columns 
           span  = link_to 'Register', '#'
-        = yield 
+          
+    = yield 
