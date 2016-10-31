@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Photogram
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' 
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+    = csrf_meta_tags 
+  body
+    - flash.each do |name, msg| 
+      = content_tag :div, msg, class: [:alert, alert_for(name)] 
+      
+
+
+  .navbar-brand
+    .navbar-default
+      .navbar-container
+        .large-6.columns 
+          span  = link_to 'Photogram'
+        .large-2.columns 
+          sapn  = link_to 'New Post', new_post_path
+        .large-2.columns 
+          span  = link_to 'Login', '#'
+        .large-2.columns 
+          span  = link_to 'Register', '#'
+        = yield 
